@@ -1,6 +1,6 @@
 const express = require('express');
-const {createServer} = require('http');
-const {Server} = require('socket.io');
+const { createServer } = require('http');
+const { Server } = require('socket.io');
 const app = express();
 const httpServer = createServer(app);
 const mongoose = require('mongoose');
@@ -29,7 +29,7 @@ app.use(express.json());
 app.use('/auth', authRouter.router)
 app.use('/products', productRouter.router)
 app.use('/', imageRouter.router);
-app.use('/message',discriptionRouter.router)
+app.use('/message', discriptionRouter.router)
 main().catch(err => console.log(err));
 async function main() {
     await mongoose.connect('mongodb+srv://umairabid927:Gpcsf-790838@cluster0.c1hdudn.mongodb.net/authentication');
@@ -62,16 +62,10 @@ httpServer.listen(3000, (req, res) => {
 
 
 
-    // server.post('/test', (req, res) => {
-        //     console.log(req.body, 'kkkkkkkkkkkkkkkkkkkkkkk');
-        //     res.json({
-        //         status: 'OK'
-        //     })
-        // })
 
 
 
-        
+
 
 // const auth = ((req, res, next) => {
 //     try {
