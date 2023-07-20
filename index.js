@@ -12,7 +12,7 @@ const discriptionRouter = require('./router/MessageSent')
 var cors = require('cors')
 const fs = require('fs');
 const path = require('path');
-const publicKey = fs.readFileSync(path.resolve(__dirname, './public.key'), 'utf-8')
+
 const io = new Server(httpServer);
 io.on('connection', (socket) => {
     console.log('a user connected');
